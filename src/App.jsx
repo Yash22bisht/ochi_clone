@@ -17,6 +17,7 @@ function App() {
     <div className="w-full min-h-screen text-white overflow-hidden  bg-zinc-900 no-scrollbar ">
       
       <Navbar/>
+      
       <Landingpage/>
       <Marque/>
       <About/>

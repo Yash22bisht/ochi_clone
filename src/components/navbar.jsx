@@ -1,25 +1,18 @@
-import { motion, useScroll, useMotionValueEvent,useMotionValue } from "framer-motion";
+import {
+  motion,
+  useScroll,
+  useMotionValueEvent,
+  useMotionValue,
+} from "framer-motion";
 import React, { useState } from "react";
+import Hamburger from "./hamburger";
+
 
 function Navbar() {
-  const {scrollY} = useScroll();
-  const [hidden, setHidden] = useState(false);
-  useMotionValueEvent(scrollY, "change", (latest) => {
-    const prev = scrollY.getPrevious();
-    console.log("Latest Y:", latest);
-    console.log("Previous Y:", prev);
-    if ( latest > prev && latest > 150) {
-      setHidden(true);
-    } else {
-      setHidden(false);
-    }
-  },[] );
+  var [clicked ,setClicked] = useState(false);
   return (
-    <motion.div
-      variants={{ visible: { y: 0 }, hidden: { y: "-100%" } }}
-      animate={hidden ?" hidden ": "visible" }
-      className="fixed    z-50 w-full px-12 py-6 flex justify-between translate "
-    >
+    <div className="">
+      <div className="fixed  z-50 w-full px-12  py-6 flex justify-between items-center translate max-sm:px-5">
       <div className="logo">
         <svg
           width="72"
@@ -50,13 +43,27 @@ function Navbar() {
           ></path>
         </svg>
       </div>
-      <div className="links">
+      <div  className=" lg:hidden   flex gap-4 ">
+      <motion.svg onClick={(e) => {
+        e.stopPropagation(); 
+        setClicked(!clicked);
+        } } initial={{height:"9",viewBox:"0 0 24 9"}} animate={clicked ?{height:"24" ,viewBox:"0 0 24 24"} :{height:"9",viewBox:"0 0 24 9"}}  className="nav-toggle" width="24" height="9" viewBox="0 0 24 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<motion.line initial={{x1:"24" , y1:"8" , x2:"-4.37114e-08", y2:"8"}} animate={clicked? {x1:"0", y1:"0" ,x2:"24", y2:"24"} :{x1:"24" , y1:"8" , x2:"-4.37114e-08", y2:"8"}} transition={{ease:"linear" ,duration:5000}} x1="24" y1="8" x2="-4.37114e-08" y2="8" stroke="currentColor"></motion.line>
+					<motion.line initial={{x1:"24" , y1:"1" , x2:"4.37114e-08" ,y2:"1" }} animate={clicked? {x1:"0", y1:"24", x2:"24" ,y2:"0"} :{x1:"24" , y1:"1" , x2:"4.37114e-08" ,y2:"1" }} transition={{ease:"linear" ,duration:5000}} x1="24" y1="1" x2="4.37114e-08" y2="1" stroke="currentColor"></motion.line>
+          <div className="">
+          
+          </div>
+			</motion.svg >
+      
+      </div>
+      
+      <div className="links flex max-lg:hidden">
         {["service", "ourwork", "About us ", "insight", "contact us"].map(
           (item, index) => (
             <a
               key={index}
-              className={` capitalize text-lg font-light mx-3 ${
-                index === 4 && "ml-64"
+              className={` max-lg:hidden  capitalize text-lg font-light mx-3 ${
+                index === 4 && "ml-[20vw]"
               }`}
             >
               {item}
@@ -64,7 +71,9 @@ function Navbar() {
           )
         )}
       </div>
-    </motion.div>
+    </div>
+    {clicked && <Hamburger clicked={clicked}/> }
+    </div>
   );
 }
 

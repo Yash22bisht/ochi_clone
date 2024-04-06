@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 function projects(props) {
   var [anime , setanime] = useState(false);
   return (
-    <div className="w-[45vw] h-[78vh] ">
+    <div className="w-[45vw] h-[78vh] max-sm:w-[90vw] max-sm:h-[36vh]">
             <div  className="  w-full h-full hover:scale-[0.95] ease-linear duration-500  object-cover rounded-xl overflow-hidden">
               <img
                 src={props.value} 

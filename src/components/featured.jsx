@@ -19,16 +19,16 @@ function feature() {
 
   
   return (
-    <div className="w-screen py-28  bg-white">
-      <h1 className="px-20  pb-12 text-6xl font-light text-black tracking-tighter border-zinc-400 border-b-[1px] ">
+    <div className="w-screen py-28  bg-white max-sm:py-16">
+      <h1 className="px-20  pb-12 text-6xl font-normal text-black tracking-tighter border-zinc-400 border-b-[1px] max-sm:px-5 max-sm:text-4xl">
         Featured projects
       </h1>
-      <div className="flex gap-6 mt-20 px-20 ">
-        <div className="space-y-3  ">
+      <div className="flex gap-6 mt-20 px-20 max-sm:px-5 max-sm:block max-sm:space-y-10 max-sm:mt-12">
+        <div className="space-y-3 max-sm:  ">
           <div
             onMouseEnter={() => handleMouseEnter(0)}
             onMouseLeave={() => handleMouseLeave(0)}
-            className="w-[45vw] h-[78vh]  relative "
+            className="w-[45vw] h-[78vh]  relative max-sm:h-[36vh]  "
           >
             <Projects value="\images\Fyde_Illustration_Crypto_2-663x551.png" />
             <div className="    absolute  z-10 top-1/3   left-[100%]  -translate-x-[50%] overflow-hidden ">
@@ -38,7 +38,7 @@ function feature() {
                     initial={{ y: 100 }}
                     animate={anime[0] ? { y: 0 } : { y: 100 }}
                     transition={{ ease: "linear", delay: index * 0.04 }}
-                    className="  inline-block"
+                    className="  inline-block  "
                   >
                     {item}
                   </motion.span>
@@ -46,7 +46,7 @@ function feature() {
               </h1>
             </div>
           </div>
-          <div className="flex gap-2">
+          <div className="flex gap-2 flex-wrap">
             <Button2 value="AUDIT " />
             <Button2 value="COPYWRITING " />
             <Button2 value="SALES DECK " />
@@ -57,7 +57,7 @@ function feature() {
           <div
             onMouseEnter={() => handleMouseEnter(1)}
             onMouseLeave={() => handleMouseLeave(1)}
-            className="w-[45vw] h-[78vh] relative "
+            className="w-[45vw] h-[78vh] relative max-sm:h-[36vh]"
           >
             <Projects value="\images\Vise_front2-663x551.jpg" />
             <div className="    absolute  z-10 top-1/3   right-[100%]  translate-x-[50%] overflow-hidden   ">
@@ -81,12 +81,12 @@ function feature() {
           </div>
         </div>
       </div>
-      <div className="flex gap-6 mt-20 px-20">
+      <div className="flex gap-6 mt-20 px-20 max-sm:px-5 max-sm:block max-sm:space-y-10">
         <div className="space-y-3 ">
           <div
             onMouseEnter={() => handleMouseEnter(2)}
             onMouseLeave={() => handleMouseLeave(2)}
-            className="w-[45vw] h-[78vh] relative "
+            className="w-[45vw] h-[78vh] relative max-sm:h-[36vh]"
           >
             <Projects value="\images\Frame-3875-663x551.jpg" />
             <div className="    absolute  z-10 top-1/3   left-[100%]  -translate-x-[50%]  overflow-hidden ">
@@ -104,7 +104,7 @@ function feature() {
               </h1>
             </div>
           </div>
-          <div className="flex gap-2">
+          <div className="flex gap-2 flex-wrap">
             <Button2 value="BRAND IDENTITY " />
             <Button2 value="DESIGN RESERCH " />
             <Button2 value="INVESTOR DECK  " />
@@ -114,7 +114,7 @@ function feature() {
           <div
             onMouseEnter={() => handleMouseEnter(3)}
             onMouseLeave={() => handleMouseLeave(3)}
-            className="w-[45vw] h-[78vh]  relative "
+            className="w-[45vw] h-[78vh]  relative max-sm:h-[36vh] "
           >
             <Projects value="\images\PB-Front-4-663x551.png" />
             <div className="    absolute  z-10 top-1/3   right-[100%]  translate-x-[50%] overflow-hidden ">

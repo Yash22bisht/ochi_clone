@@ -2,7 +2,7 @@ import React from "react";
 
 function footer() {
   return (
-    <div data-scroll data-scroll-speed="0.1" className="w-full px-20 pt-20 pb-10  flex ">
+    <div data-scroll data-scroll-speed="0.1" className="w-full px-20 pt-20 pb-10  flex max-sm:px-5 ">
       <div className="w-1/2 flex justify-between flex-col">
         <h1 className=" text-[6.5vw] uppercase tracking-tighter leading-none font-semibold  ">
           eyes- <br /> opening{" "}

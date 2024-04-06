@@ -19,39 +19,39 @@ function start() {
     });
   });
   return (
-    <div data-scroll-section  className="w-screen h-[120vh]  overflow-hidden">
-      <div  data-scroll data-scroll-speed="-0.7"  className="w-screen h-[120vh] bg-[#CDEA68] flex items-center justify-center flex-col  ">
+    <div data-scroll-section  className="w-screen h-[120vh]  overflow-hidden max-sm:h-[70vh]">
+      <div  data-scroll data-scroll-speed="-0.7"  className="w-screen h-[120vh] bg-[#CDEA68] flex items-center justify-center flex-col  max-sm:h-[80vh] max-sm:justify-start max-sm:pt-16 ">
       <h1 className=" text-[12vw] tracking-tighter uppercase text-black font-bold ">
         Ready
       </h1>
-      <h1 className=" text-[12vw] tracking-tighter uppercase text-black font-bold leading-10 m-5 ">
+      <h1 className=" text-[12vw] tracking-tighter uppercase text-black font-bold leading-10 m-5  max-sm:-my-1 max-sm:font-extrabold">
         to start
       </h1>
       <h1 className=" text-[12vw] tracking-tighter uppercase text-black font-bold ">
         The project?
       </h1>
-      <div className=" eyes flex gap-11 absolute">
-        <div className="w-[14vw] h-[14vw] bg-zinc-50 rounded-full flex justify-center items-center ">
-          <div className="w-2/3 h-2/3 rounded-full bg-black  relative ">
-            <div
-              style={{
-                transform: `translate(-50%, -50%) rotate(${rotate}deg)`,
-              }}
-              className=" line ease-linear w-full h-6 absolute top-1/2 left-1/2 -translate-x-[50%] -translate-y-[50%] "
-            >
-              <div className="w-6 h-6 bg-zinc-50 rounded-full"></div>
-            </div>
-          </div>
-        </div>
-        <div className="w-[14vw] h-[14vw] bg-zinc-50 rounded-full flex justify-center items-center  ">
-          <div className="w-2/3 h-2/3 rounded-full bg-black  relative ">
+      <div className=" eyes flex gap-11 absolute max-sm:static max-sm:gap-3 max-sm:my-7" >
+      <div className="w-[14vw] h-[14vw] bg-zinc-50 rounded-full flex justify-center items-center  max-sm:w-[20vw] max-sm:h-[20vw] ">
+          <div className="w-2/3 h-2/3 rounded-full bg-black  relative max-sm:w-[13vw] max-sm:h-[13vw]">
             <div
               style={{
                 transform: `translate(-50%, -50%) rotate(${rotate}deg)`,
               }}
               className="line w-full h-6 absolute top-1/2 left-1/2 -translate-x-[50%] -translate-y-[50%] "
             >
-              <div className="w-6 h-6 bg-zinc-50 rounded-full"></div>
+              <div className="w-6 h-6 bg-zinc-50 rounded-full max-sm:w-[3.5vw] max-sm:h-[3.5vw]"></div>
+            </div>
+          </div>
+        </div>
+        <div className="w-[14vw] h-[14vw] bg-zinc-50 rounded-full flex justify-center items-center  max-sm:w-[20vw] max-sm:h-[20vw] ">
+          <div className="w-2/3 h-2/3 rounded-full bg-black  relative max-sm:w-[13vw] max-sm:h-[13vw]">
+            <div
+              style={{
+                transform: `translate(-50%, -50%) rotate(${rotate}deg)`,
+              }}
+              className="line w-full h-6 absolute top-1/2 left-1/2 -translate-x-[50%] -translate-y-[50%] "
+            >
+              <div className="w-6 h-6 bg-zinc-50 rounded-full max-sm:w-[3.5vw] max-sm:h-[3.5vw]"></div>
             </div>
           </div>
         </div>
